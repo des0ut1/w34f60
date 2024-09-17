@@ -1,0 +1,96 @@
+//1 практика 1
+fun main() {
+    println("   Целочисленный тип данных - один из самых простых примитивных типов данных в информатике.")
+    println("Переменной присваивают значение сразу же, а не в отдельной строке. Тип обычно не указывают.")
+    println("Потому что по умолчанию Kotlin сам определяет его как int для целых чисел.")
+    println("   Строковой тип данных - тип данных, значениями которого является произвольная последовательность (строка) символов алфавита.")
+    println("Строки в Kotlin представлены типом String. Как правило, строка представляет собой последовательность символов в двойных кавычках.")
+}
+
+//1 практика 2
+fun main() {
+    println("10.34")
+}
+
+//1 практикаа 3
+fun main() {
+    // Вычисляем число e
+    val e = Math.E
+    
+    // Округляем до одной десятой
+    val eRounded = String.format("%.1f", e)
+    
+    // Выводим результат
+    println("Число e с точностью до одной десятой: $eRounded")
+}
+
+//1 практика 4
+fun main() {
+  // Запрашиваем у пользователя ввод числа
+print("Введите число: ")
+val num = readLine()!!.toInt()
+
+// Выводим сообщение и само число
+println("Вы ввели число")
+}
+
+//1 практика 5
+fun main() {
+    println("Введите число:")
+    val input = readLine()
+    if (input != null) {
+        println("$input — вот какое число Вы ввели")
+    } else {
+        println("Не было введено никакого числа.")
+    }
+
+}
+
+//1 практика 6
+fun main() {
+    println("1 13 49")
+}
+
+//1 практика 7
+fun main() {
+    println("1  15  100")
+}
+
+//1 практика 8
+fun main() {
+    val number1 = 10
+    val number2 = 20
+    val number3 = 30
+    println("$number1  $number2  $number3")
+}
+
+//1 практика 9
+fun main() {
+    val number1 = 10
+    val number2 = 20
+    val number3 = 30
+    val number4 = 40
+    println("$number1 $number2 $number3 $number4")
+}
+
+//1 практика 10
+fun main() {
+    println("50")
+    println("10")
+}
+
+//1 практика 11
+fun main() {
+    println("5")
+    println("10")
+    println("21")
+}
+
+//1 практика 12
+fun main() {
+    val number1 = 5
+    val number2 = 10
+    val number3 = 15
+    val number4 = 20
+    println(" $number1\n $number2\n $number3\n $number4")
+}
