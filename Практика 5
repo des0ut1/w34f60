@@ -1,1 +1,507 @@
+//Практическая работа 5
+//1
+fun main() {
+    for (zxc in 1..10) {
+        println(zxc)
+    }
+}
+
+//Практическая работа 5
+//2
+fun main() {
+    for (zxc in 1..20) {
+        if (zxc % 2 == 0) {
+            println(zxc)
+        }
+    }
+}
+
+//Практическая работа 5
+//3
+fun main() {
+    print("Введиет число N: ")
+    val zxc = readLine()!!.toInt()
+    val zxcc = (1..zxc).sum()
+    println("Сумма чисел от 1 до $zxc равна $zxcc")
+}
+
+//Практическая работа 5
+//4
+fun main() {
+    print("Введите число: ")
+    val zxc = readLine()!!.toInt()
+    var zxcc = 1
+    for (zxccc in 1..zxc) {
+        zxcc *= zxccc
+    }
+    println("Факториал $zxc равен $zxcc")
+}
+
+//Практическая работа 5
+//5
+fun main() {
+    print("Введите число: ")
+    val zxc = readLine()!!.toInt()
+    var zxcc = true
+    if (zxc <= 1) {
+        zxcc = false
+    } else {
+        for (zxczxc in 2..Math.sqrt(zxc.toDouble()).toInt()) {
+            if (zxc % zxczxc == 0) {
+                zxcc = false
+                break
+            }
+        }
+    }
+    println("Число $zxc равно ${if (zxcc) "простое" else "не простое"}")
+}
+
+//Практическая работа 5
+//6
+fun main() {
+    println("Таблица умножения от 1 до 10:")
+    for (zxc in 1..10) {
+        for (zxczxc in 1..10) {
+            print("$zxc * $zxczxc = ${zxc * zxczxc}\t")
+        }
+        println()
+    }
+}
+
+//Практическая работа 5
+//7
+fun main() {
+    print("Введите количество чисел фибоначчи для генерации: ")
+    val zxc = readLine()!!.toInt()
+    val fibonacciNumbers = mutableListOf<Int>()
+    var zxczxc = 0
+    var zxcc = 1
+    for (zxccc in 1..zxc) {
+        fibonacciNumbers.add(zxczxc)
+        val temp = zxczxc
+        zxczxc = zxcc
+        zxcc = temp + zxcc
+    }
+    println("Первые $zxc чисел фибоначчи таковы: ${fibonacciNumbers.joinToString()}")
+}
+
+//Практическая работа 5
+//8
+fun main() {
+    print("Введите первое число: ")
+    val zxc = readLine()!!.toInt()
+    print("Введите второе число: ")
+    val zxcc = readLine()!!.toInt()
+    val zxczxc = gcd(zxc, zxcc)
+    println("НОД чисел $zxc и $zxcc равен $zxczxc")
+}
+fun gcd(a: Int, b: Int): Int {
+    if (b == 0) {
+        return a
+    } else {
+        return gcd(b, a % b)
+    }
+}
+
+//Практическая работа 5
+//9
+fun main() {
+    print("Введите строку: ")
+    val zxc = readLine()!!
+    val zxczxc = zxc.reversed()
+    println("Перевернутая строка равна: $zxczxc")
+}
+
+//Практическая работа 5
+//10
+fun main() {
+    print("Введите число: ")
+    val zxc = readLine()!!.toInt()
+    val zxczxc = zxc.toString().fold(0) { acc, c -> acc + c.toString().toInt() }
+    println("Сумма цифр равна: $zxczxc")
+}
+
+//Практическая работа 5
+//11
+fun main() {
+    print("Введите первую строку: ")
+    val zxc = readLine()!!.toLowerCase()
+    print("Введите вторую строку: ")
+    val zxcc = readLine()!!.toLowerCase()
+    val zxczxc = zxc.toCharArray().sorted().joinToString("") == zxcc.toCharArray().sorted().joinToString("")
+    println("Строки являются анаграммами: $zxczxc")
+}
+
+//Практическая работа 5
+//12
+fun main() {
+    print("Введите начальный номер: ")
+    val zxc = readLine()!!.toInt()
+    print("введите шаг: ")
+    val zxczxc = readLine()!!.toInt()
+    print("Введите кол-во терминов: ")
+    val zxcc = readLine()!!.toInt()
+    val cxz = generateSequence(zxc) { it + zxczxc }.take(zxcc)
+    println("Числовая последовательность равна: $cxz")
+}
+
+//Практическая работа 5
+//13
+fun main() {
+    println("Таблица квадратов:")
+    for (zxc in 1..20) {
+        println("$zxc | ${zxc * zxc}")
+    }
+}
+
+//Практическая работа 5
+//14
+fun main() {
+    println("Случайные числа:")
+    for (i in 1..10) {
+        val xxx = (1..100).random()
+        println(xxx)
+    }
+}
+
+//Практическая работа 5
+//15
+fun main() {
+    print("Введите строку: ")
+    val zxc = readLine()!!.trim()
+    val zxcc = zxc.reversed()
+    if (zxc.equals(zxcc, ignoreCase = true)) {
+        println("Строка является палиндромом.")
+    } else {
+        println("Строка не является палиндромом.")
+    }
+}
+
+//Практическая работа 5
+//16
+fun main() {
+    print("Введите число N: ")
+    val zxc = readLine()!!.toInt()
+    var zxczxc = 0
+    for (cxz in 1..zxc) {
+        zxczxc += cxz * cxz
+    }
+    println("Сумма квадратов равна: $zxczxc")
+}
+
+//Практическая работа 5
+//17
+fun main() {
+    print("Введите строку: ")
+    val zxc = readLine()!!.trim()
+    for (xxx in zxc) {
+        println(xxx)
+    }
+}
+
+//Практическая работа 5
+//18
+fun main() {
+    print("Введите число N: ")
+    val zxc = readLine()!!.toInt()
+    for (cxz in 1..zxc) {
+        for (zxczxc in 1..cxz) {
+            print("#")
+        }
+        println()
+    }
+}
+
+//Практическая работа 5
+//19
+fun main() {
+    print("Введите размер массива: ")
+    val zxc = readLine()!!.toInt()
+    val zxczxc = IntArray(zxc)
+    for (ccc in 0 until zxc) {
+        print("Введите элемент #$ccc: ")
+        zxczxc[ccc] = readLine()!!.toInt()
+    }
+    for (xxx in 0 until zxc - 1) {
+        for (zzz in 0 until zxc - xxx - 1) {
+            if (zxczxc[zzz] > zxczxc[zzz + 1]) {
+                val zxczxczxc = zxczxc[zzz]
+                zxczxc[zzz] = zxczxc[zzz + 1]
+                zxczxc[zzz + 1] = zxczxczxc
+            }
+        }
+    }
+    println("Отсортированный массив:")
+    for (cxz in 0 until zxc) {
+        println(zxczxc[cxz])
+    }
+}
+
+//Практическая работа 5
+//20
+fun main() {
+    print("Введите начало диапазона: ")
+    val zxc = readLine()!!.toInt()
+    print("Введите конец диапазона: ")
+    val cxz = readLine()!!.toInt()
+    for (xxx in zxc..cxz) {
+        if (isPrime(xxx)) {
+            println(xxx)
+        }
+    }
+}
+
+fun isPrime(zxc: Int): Boolean {
+    if (zxc <= 1) return false
+    for (cxz in 2..Math.sqrt(zxc.toDouble()).toInt()) {
+        if (zxc % czx == 0) return false
+    }
+    return true
+}
+
+//Практическая работа 5
+//21
+import java.util.Calendar
+
+fun main() {
+    println("Введите год:")
+    val zxc = readLine()!!.toInt()
+    println("Введите месяц (1-12):")
+    val zxczxc = readLine()!!.toInt()
+    val cxz = Calendar.getInstance()
+    cxz.set(Calendar.YEAR, zxc)
+    cxz.set(Calendar.MONTH, zxczxc - 1)
+    val xxx = cxz.getActualMaximum(Calendar.DAY_OF_MONTH)
+    println("Даты в $zxczxc месяце $zxc года:")
+    for (day in 1..xxx) {
+        cxz.set(Calendar.DAY_OF_MONTH, day)
+        println("${cxz.get(Calendar.DAY_OF_MONTH)} ${getMonthName(zxczxc)} $zxc")
+    }
+}
+fun getMonthName(xxxxx: Int): String {
+    return when (xxxxx) {
+        1 -> "января"
+        2 -> "февраля"
+        3 -> "марта"
+        4 -> "апреля"
+        5 -> "мая"
+        6 -> "июня"
+        7 -> "июля"
+        8 -> "августа"
+        9 -> "сентября"
+        10 -> "октября"
+        11 -> "ноября"
+        12 -> "декабря"
+        else -> ""
+    }
+}
+
+//Практическая работа 5
+//22
+import kotlin.random.Random
+fun main() {
+    val zxc = Random.nextInt(1, 101) //
+    var cxz = 0
+    println("Угадай число от 1 до 100!")
+    while (true) {
+        println("Введите ваше предположение:")
+        val xxx = readLine()!!.toInt()
+        cxz++
+        when {
+            xxx < zxc -> println("Ваше число слишком маленькое. Попробуйте снова!")
+            xxx > zxc -> println("Ваше число слишком большое. Попробуйте снова!")
+            else -> {
+                println("Поздравляем! Вы угадали число $zxc за $cxz попыток!")
+                break
+            }
+        }
+    }
+}
+
+//Практическая работа 5
+//23
+fun main() {
+    println("Введите 'стоп', чтобы остановить программу.")
+    while (true) {
+        println("Введите первую цифру:")
+        val zxc = readLine()!!.toIntOrNull()
+        if (zxc == null) {
+            println("Некорректный ввод. Пожалуйста, введите целое число.")
+            continue
+        }
+        println("Введите вторую цифру:")
+        val cxz = readLine()!!.toIntOrNull()
+        if (cxz == null) {
+            println("Некорректный ввод. Пожалуйста, введите целое число.")
+            continue
+        }
+        println("Выберите операцию: '+' для сложения, '*' для умножения")
+        val zxczxc = readLine()!!
+        when (zxczxc) {
+            "+" -> println("Результат сложения: ${zxc + cxz}")
+            "*" -> println("Результат умножения: ${zxc * cxz}")
+            "стоп" -> {
+                println("Программа остановлена.")
+                break
+            }
+            else -> println("Некорректный ввод. Пожалуйста, введите '+' или '*'.")
+        }
+    }
+}
+
+//Практическая работа 5
+//24
+fun main() {
+    println("Введите кол-во строк в матрице:")
+    val zxc = readLine()!!.toIntOrNull()
+    if (zxc == null) {
+        println("Неверный ввод. Введите положительное целое число.")
+        return
+    }
+    println("Введите кол-во столбцов в матрице:")
+    val cxz = readLine()!!.toIntOrNull()
+    if (cxz == null) {
+        println("Неверный ввод. Введите положительное целое число.")
+        return
+    }
+    val zxczxc = Array(zxc) { Array(cxz) { 0 } }
+    println("Введите элементы матрицы:")
+    for (x in 0 until zxc) {
+        for (z in 0 until cxz) {
+            print("элемент [$x][$z]: ")
+            zxczxc[x][z] = readLine()!!.toIntOrNull() ?: 0
+        }
+    }
+    println("Исходная матрица:")
+    printMatrix(zxczxc)
+    val zxccc = transposeMatrix(zxczxc)
+    println("Транспортированная матрица:")
+    printMatrix(zxccc)
+}
+fun transposeMatrix(matrix: Array<Array<Int>>): Array<Array<Int>> {
+    val cxzz = matrix.size
+    val zxcc = matrix[0].size
+    val qq = Array(zxcc) { Array(cxzz) { 0 } }
+
+    for (z in 0 until cxzz) {
+        for (x in 0 until zxcc) {
+            qq[x][z] = matrix[z][x]
+        }
+    }
+    return qq
+}
+fun printMatrix(matrix: Array<Array<Int>>) {
+    for (ewq in matrix) {
+        for (qwe in ewq) {
+            print("$qwe ")
+        }
+        println()
+    }
+}
+
+//Практическая работа 5
+//25
+fun main() {
+    println("Кубики чисел от 1 до 10:")
+    for (q in 1..10) {
+        val qwe = q * q * q
+        println("Куб из $q: $qwe")
+    }
+}
+
+//Практическая работа 5
+//26
+fun main() {
+    println("Введите положительное целое число N:")
+    val zxc = readLine()!!.toIntOrNull()
+    if (zxc == null || zxc <= 0) {
+        println("Неверный ввод. Введите положительное целое число.")
+        return
+    }
+    var xxx = 0
+    var cxz = 0
+
+    for (q in 1..zxc) {
+        if (q % 2 == 0) {
+            xxx += q
+        } else {
+            cxz += q
+        }
+    }
+    println("Сумма четных чисел от 1 до $zxc: $xxx")
+    println("Сумма нечетных чисел от 1 до $zxc: $cxz")
+}
+
+//Практическая работа 5
+//27
+fun main() {
+    println("Введите положительное целое число N:")
+    val zxc = readLine()!!.toIntOrNull()
+    if (zxc == null || zxc <= 0) {
+        println("Неверный ввод.")
+        return
+    }
+
+    for (cxz in 1..zxc) {
+        for (zxczxc in 1..cxz) {
+            print("$zxczxc ")
+        }
+        println()
+    }
+}
+
+//Практическая работа 5
+//28
+fun main() {
+    println("Введите кол-во элементов N:")
+    val zxc = readLine()!!.toIntOrNull()
+    if (zxc == null || zxc <= 0) {
+        println("Неверныйц ввод.")
+        return
+    }
+    val zxczxc = mutableListOf<Int>()
+    println("Введите $zxc чисел:")
+    for (z in 1..zxc) {
+        val zzz = readLine()!!.toIntOrNull()
+        if (zzz == null) {
+            println("Неверный ввод.")
+            return
+        }
+        zxczxc.add(zzz)
+    }
+    zxczxc.sort()
+    println("Числа в порядке возрастания:")
+    for (cxz in zxczxc) {
+        println(cxz)
+    }
+}
+
+//Практическая работа 5
+//29
+fun main() {
+    println("Введите положительно целое число N:")
+    val zxc = readLine()!!.toIntOrNull()
+    if (zxc == null || zxc <= 0) {
+        println("Неверный ввод.")
+        return
+    }
+    var qwe = 0.0
+    for (xxx in 1..zxc) {
+        qwe += 1.0 / xxx
+    }
+    println("Сумма ряда: $qwe")
+}
+
+//Практическая работа 5
+//30
+fun main() {
+    println("Введите целое число:")
+    val zxc = readLine()!!.toIntOrNull()
+    if (zxc == null) {
+        println("Неверный ввод.")
+        return
+    }
+    val qwe = zxc.toString(2)
+    println("Двоичное представление: $qwe")
+}
 
